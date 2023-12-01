@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --primary: rgb(97, 13, 125);
+}
+
+nav {
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  background: var(--primary);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.main {
+  width: 100vw;
+  max-width: 1000px;
+  margin: auto;
+}
+
+main .card-cont {
+  margin-top: 7vh;
+  width: 100%;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+main .card-cont .card {
+  width: 100%;
+  padding: 1rem;
+  max-width: 90vw;
+  border-radius: 12px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3333333333);
+}
+main .card-cont .card img {
+  width: 80%;
+  margin: auto;
+  align-self: center;
+  aspect-ratio: 1/1;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  display: flex;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: width 0.5s;
+}
+main .card-cont .card img:hover {
+  width: 100%;
+}
+main .card-cont .card .sect-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .card-cont .card .sect-2 h2 {
+  font-size: 1.3rem;
+  color: rgb(4, 4, 69);
+}
+main .card-cont .card .sect-2 .rating {
+  color: goldenrod;
+}
+main .card-cont .card .sect-2 .description {
+  font-size: 0.8rem;
+  color: #8c8b8b;
+}
+main .card-cont .card .sect-2 .price {
+  color: green;
+}
+
+@media screen and (max-width: 700px) {
+  .card-cont {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  .card-cont {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}/*# sourceMappingURL=style.css.map */
